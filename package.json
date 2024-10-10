@@ -1,0 +1,35 @@
+{
+	"name": "eria-design-system",
+	"version": "1.0.0",
+	"description": "Design System for Eria",
+	"scripts": {
+		"start": "run-p start:*",
+		"start:eleventy": "eleventy --serve",
+		"start:postcss": "postcss src/styles/*.css --dir public --watch",
+		"build": "run-s clean build:eleventy build:postcss",
+		"build:eleventy": "cross-env ELEVENTY_PRODUCTION=true eleventy",
+		"build:postcss": "cross-env NODE_ENV=production postcss src/styles/*.css --dir public",
+		"clean": "rimraf public"
+	},
+	"keywords": [
+		"Design System",
+		"Eria"
+	],
+	"author": "Eria",
+	"license": "proprietary",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0-alpha.10",
+		"@tailwindcss/typography": "^0.5.10",
+		"autoprefixer": "^10.4.19",
+		"cross-env": "^7.0.3",
+		"cssnano": "^7.0.1",
+		"daisyui": "^4.12.10",
+		"html-minifier-terser": "^7.2.0",
+		"npm-run-all": "^4.1.5",
+		"postcss": "^8.4.38",
+		"postcss-cli": "^11.0.0",
+		"postcss-import": "^16.1.0",
+		"rimraf": "^5.0.5",
+		"tailwindcss": "^3.4.1"
+	}
+}
