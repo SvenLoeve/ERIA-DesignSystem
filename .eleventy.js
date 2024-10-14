@@ -6,6 +6,11 @@ module.exports = function(eleventyConfig) {
 		eleventyConfig.addTransform("htmlmin", htmlminTransform);
 	}
 
+	var pathPrefix = "";
+	if (process.env.GITHUB_REPOSITORY) {
+		pathPrefix = process.env.GITHUB_REPOSITORY.split('/')[1];
+	}
+
 	// Passthrough
 	eleventyConfig.addPassthroughCopy({ "src/assets": "." });
 
@@ -30,6 +35,7 @@ module.exports = function(eleventyConfig) {
 			layouts: "../layouts",
 			data: "../data",
 		},
+		pathPrefix: pathPrefix,
 	};
 }
 

@@ -12,14 +12,14 @@
 	<meta name="generator" content="{{ eleventy.generator }}" />
 
 	<!-- Icons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
-	<link rel="manifest" href="/img/icons/site.webmanifest">
-	<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#9e7e0f">
-	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/icons/apple-touch-icon.png' | url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/icons/favicon-32x32.png' | url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/icons/favicon-16x16.png' | url }}">
+	<link rel="manifest" href="{{ '/img/icons/site.webmanifest' | url }}">
+	<link rel="mask-icon" href="{{ '/img/icons/safari-pinned-tab.svg' | url }}" color="#9e7e0f">
+	<link rel="shortcut icon" href="{{ '/favicon.ico' | url }}">
 	<meta name="msapplication-TileColor" content="#fbfb7f">
-	<meta name="msapplication-config" content="/img/icons/browserconfig.xml">
+	<meta name="msapplication-config" content="{{ '/img/icons/browserconfig.xml' | url }}">
 	<meta name="theme-color" content="#fbfb7f">
 
 	<!-- Open Graph -->
@@ -114,31 +114,31 @@
 				<label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 				<ul class="menu text-base-content min-h-screen bg-base-100 w-60 p-4">
 					<!-- Sidebar content -->
-					<a href="../" class="btn btn-ghost">
+					<a href="{{ '../' | url }}" class="btn btn-ghost">
 						Eria Design System
 					</a>
 
-					<li class="menu-title">Fundementals</li>
-					<li><a href="/methodology">Methodology</a></li>
-					<li><a href="/accessibility">Accessibility</a></li>
-					<li><a href="/colors">Colors</a></li>
-					<li><a href="/typography">Typography</a></li>
-					<li><a href="/icons">Icons</a></li>
-
+					<li class="menu-title">Fundamentals</li>
+					<li><a href="{{ '/methodology' | url }}">Methodology</a></li>
+					<li><a href="{{ '/accessibility' | url }}">Accessibility</a></li>
+					<li><a href="{{ '/colors' | url }}">Colors</a></li>
+					<li><a href="{{ '/typography' | url }}">Typography</a></li>
+					<li><a href="{{ '/icons' | url }}">Icons</a></li>
+					
 					<li class="menu-title">Atoms (components)</li>
-					<li><a href="/buttons">Buttons</a></li>
-					<li><a href="/inputs">Inputs</a></li>
-
+					<li><a href="{{ '/buttons' | url }}">Buttons</a></li>
+					<li><a href="{{ '/inputs' | url }}">Inputs</a></li>
+					
 					<li class="menu-title">Molecules</li>
-					<li><a href="/dropdown">Dropdown</a></li>
-					<li><a href="/tabs">Tabs</a></li>
-					<li><a href="/cards">Cards</a></li>
-					<li><a href="/modals">Modals</a></li>
-
+					<li><a href="{{ '/dropdown' | url }}">Dropdown</a></li>
+					<li><a href="{{ '/tabs' | url }}">Tabs</a></li>
+					<li><a href="{{ '/cards' | url }}">Cards</a></li>
+					<li><a href="{{ '/modals' | url }}">Modals</a></li>
+					
 					<li class="menu-title">Organisms</li>
-					<li><a href="/navbar">Navbar</a></li>
-					<li><a href="/sidebar">Sidebar</a></li>
-					<li><a href="/footer">Footer</a></li>
+					<li><a href="{{ '/navbar' | url }}">Navbar</a></li>
+					<li><a href="{{ '/sidebar' | url }}">Sidebar</a></li>
+					<li><a href="{{ '/footer' | url }}">Footer</a></li>
 				</ul>
 			</nav>
 		</div>
