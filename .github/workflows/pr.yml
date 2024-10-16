@@ -46,9 +46,18 @@ jobs:
       - name: Build
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
 
-      - name: Ensure PR can be merged
-        run: gh pr check ${{ github.event.pull_request.number }}
+      - name: Check if PR is mergeable
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_MERGEABLE=$(gh pr view $PR_NUMBER --json mergeable --jq '.mergeable')
 
+          if [ "$PR_MERGEABLE" != "MERGEABLE" ]; then
+            echo "PR is not mergeable. Exiting..."
+            exit 1
+          else
+            echo "PR is mergeable."
+          fi
+          
       - name: Merge Dependabot PR
         if: success() # Only merge if the build was successful
         run: gh pr merge ${{ github.event.pull_request.number }} --merge
