@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
 
@@ -33,6 +33,11 @@
 
 	<link rel="stylesheet" href="{{ '/site.css' | url }}" />
 	<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+	<script>
+		{% include "includes/theme.js" %}
+	</script>
+
 	{% if mermaid %}
 		<script src="https://cdn.jsdelivr.net/npm/mermaid@11.2.1/dist/mermaid.min.js"></script>
 		<script>
@@ -90,11 +95,11 @@
 
 					<!-- Menu for desktop -->
 					<div role="tablist" class="hidden lg:tabs tabs-boxed">
-						<a role="tab" class="tab gap-2">
+						<a role="tab" class="tab gap-2" onclick="setTheme('light')">
 							<i class="fa-solid fa-table"></i>
 							Light
 						</a>
-						<a role="tab" class="tab tab-active gap-2">
+						<a role="tab" class="tab tab-active gap-2" onclick="setTheme('dark')">
 							<i class="fa-solid fa-circle-nodes"></i>
 							Dark
 						</a>
