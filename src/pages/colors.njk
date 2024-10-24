@@ -6,6 +6,14 @@ description: Colors - Definitive Color Pack
 
 <h1>Colors</h1>
 
+<p>ERIA’s design system features two key brand colors: <b>Purple</b> and <b>Teal</b>. Purple serves as an accent for patient-facing applications and clinical tools, while Teal is commonly used for developer resources and internal documentation.</p>
+
+<p>Consistent and thoughtful color usage is essential to maintain a clear, intuitive, and cohesive visual experience. In healthcare, where clarity is paramount, colors are used strategically on actionable interface elements such as buttons, alerts, and important information sections. Neutral colors—shades of white and grey—help divide content and emphasize specific areas without overwhelming the user.</p>
+
+<h2>Design Tokens</h2>
+
+<p>The base color palette consists of predefined system colors, but designers should avoid directly copying HEX values. Instead, use color tokens to ensure consistent application across the interface. Colors are referred to as <code>color-value</code>, For example <code>primary-500</code>, ensuring that all color choices adhere to accessibility standards, including contrast ratios essential for healthcare environments.</p>
+
 {% set colorsGroups = {
 	'Primary Colors': colors.primary,
 	'Secondary Colors': colors.secondary,
@@ -32,10 +40,6 @@ description: Colors - Definitive Color Pack
 		</div>
 	{% endfor %}
 </div>
-
-<h2>Design Tokens</h2>
-
-<p>The colors are referred to as <code>color-value</code>, For example <code>primary-500</code></p>
 
 <h2>Usage Guidelines</h2>
 
