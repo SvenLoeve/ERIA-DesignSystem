@@ -1,7 +1,7 @@
 {
 	"name": "eria-design-system",
 	"version": "1.0.0",
-	"description": "Design System for Eria",
+	"description": "Design System for ERIA",
 	"scripts": {
 		"start": "run-p start:*",
 		"start:eleventy": "eleventy --serve",
@@ -13,9 +13,9 @@
 	},
 	"keywords": [
 		"Design System",
-		"Eria"
+		"ERIA"
 	],
-	"author": "Eria",
+	"author": "ERIA",
 	"license": "proprietary",
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",

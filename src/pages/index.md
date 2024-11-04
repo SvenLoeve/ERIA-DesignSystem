@@ -1,6 +1,6 @@
 ---
 layout: default.njk
-title: Eria design system
+title: ERIA design system
 ---
 
 This site is the documentation of the design system of Eria Lifesystems. It is a collection of reusable components and guidelines for creating consistent and accessible user interfaces.
