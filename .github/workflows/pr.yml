@@ -62,7 +62,7 @@ jobs:
           PR_MERGEABLE=$(gh pr view $PR_NUMBER --json mergeable --jq '.mergeable')
 
           if [ "$PR_MERGEABLE" != "MERGEABLE" ]; then
-            echo "PR is not mergeable. Exiting..."
+            echo "PR is not mergeable. PR mergeable status is $PR_MERGEABLE. Exiting..."
             exit 1
           else
             echo "PR is mergeable."
