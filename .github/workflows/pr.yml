@@ -5,6 +5,13 @@ on:
   pull_request:
     branches:
       - trunk
+  
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: "Pull request number to run this workflow on"
+        required: true
+        type: number
 
 permissions:
   contents: write
@@ -13,8 +20,9 @@ permissions:
 jobs:
   # Job for building and testing Dependabot PRs
   test_dependabot_pr:
-    if: github.actor == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,7 +58,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Set GH_TOKEN for GitHub CLI
         run: |
-          PR_NUMBER=${{ github.event.pull_request.number }}
+          PR_NUMBER=${{ github.event.inputs.pr_number || github.event.pull_request.number }}
           PR_MERGEABLE=$(gh pr view $PR_NUMBER --json mergeable --jq '.mergeable')
 
           if [ "$PR_MERGEABLE" != "MERGEABLE" ]; then
@@ -62,6 +70,6 @@ jobs:
           
       - name: Merge Dependabot PR
         if: success() # Only merge if the build was successful
-        run: gh pr merge ${{ github.event.pull_request.number }} --merge
+        run: gh pr merge ${{ github.event.inputs.pr_number || github.event.pull_request.number }} --merge
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
