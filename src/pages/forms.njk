@@ -1,0 +1,76 @@
+---
+layout: default.njk
+title: Forms
+description: Forms - A collection of form elements
+---
+
+<h1>Forms</h1>
+
+<p>Forms are essential for user input and data collection. They enable users to submit information, perform searches, and interact with the application. Properly designed forms enhance user experience and ensure data accuracy.</p>
+
+<p>Forms rely on <a href="{{ '/inputs' | url }}">input elements</a> to collect data, and they often include <a href="{{ '/buttons' | url }}">buttons</a> for submission or other actions. Labels provide context and guidance for users, while placeholders offer hints about the expected input.</p>
+
+<h2>Example: Login Form</h2>
+
+<form class="form-control w-full max-w-xs flex flex-col gap-4">
+	<label class="input input-bordered flex items-center gap-2">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+			<path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm4.73 6c.62 0 1.1-.56.88-1.14a6 6 0 0 0-11.22 0c-.22.58.26 1.14.87 1.14h9.47Z"/>
+		</svg>
+		<input type="text" class="grow" placeholder="Username" aria-label="Username"/>
+	</label>
+	<label class="input input-bordered flex items-center gap-2">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+			<path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.9 3.9l-1.95 1.95a.5.5 0 0 1-.36.15H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.3a.5.5 0 0 1 .15-.35L6.1 6.9A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+		</svg>
+		<input type="password" class="grow" value="password" aria-label="Password"/>
+	</label>
+	<button class="btn btn-primary mt-4">Login</button>
+</form>
+
+<h2>Explanation</h2>
+
+<p>The login form consists of the following elements:</p>
+
+<ul>
+	<li>
+		<strong>Username Input:</strong>
+		A text input field for the user to enter their username.</li>
+	<li>
+		<strong>Password Input:</strong>
+		A password input field for the user to enter their password. The input type is set to "password" to mask the
+		characters.</li>
+	<li>
+		<strong>Icons</strong>
+		Icons are used to visually showcase what everything does inside that input field.</li>
+	<li>
+		<strong>Login Button:</strong>
+		A primary button to submit the form and initiate the login process.</li>
+</ul>
+
+<p>Each element is placed within a form control container to ensure proper spacing and alignment. The labels provide clear instructions to the user, and the input fields are styled using DaisyUI classes for a consistent look and feel.</p>
+
+<h2>Guidelines</h2>
+
+<h3>Dos</h3>
+
+<ul>
+	<li>Use clear and concise labels for form elements to ensure accessibility.</li>
+	<li>Group related form elements together for better organization.</li>
+	<li>Provide appropriate input types (e.g., text, password, email) for different data.</li>
+	<li>Ensure proper spacing and alignment of form elements. All elements should be spaced equally for consistency.</li>
+	<li>Use primary buttons for main actions and default or secondary buttons for supplementary actions.</li>
+</ul>
+
+<h3>Don'ts</h3>
+
+<ul>
+	<li>Don't use placeholder text as a substitute for labels.</li>
+	<li>Don't overcrowd the form with too many elements or adjacent forms that might cause confusion.</li>
+	<li>Don't use inconsistent styling for form elements.</li>
+	<li>Don't forget to provide feedback for form validation errors.</li>
+</ul>
+
+<h2>Further Documentation</h2>
+
+<p>For more information about implementation and usage, refer to the <a href="https://daisyui.com/components/input/">DaisyUI documentation</a>.</p>
