@@ -1,0 +1,109 @@
+---
+layout: default.njk
+title: Inputs
+description: Inputs - Guidelines and Styles
+---
+
+<h1>Input</h1>
+
+<p>Input elements are places where users can provide input that goes beyond what a single button could do, like inserting dates, names, options and many more. </p>
+
+<h2>Examples of Input Types</h2>
+
+<form class="form-control w-full max-w-xs flex-col gap-2">
+	<label class="label">
+		<span class="label-text">Text Input</span>
+	</label>
+	<input type="text" placeholder="Enter text" class="input input-bordered w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Password Input</span>
+	</label>
+	<label class="input input-bordered flex items-center gap-2">
+		<svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
+			<path fill-rule="evenodd" d="M14 6a4 4 0 0 1-4.9 3.9l-1.95 1.95a.5.5 0 0 1-.36.15H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.3a.5.5 0 0 1 .15-.35L6.1 6.9A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+		</svg>
+		<input type="password" placeholder="Enter password" class="w-full max-w-xs" aria-label="Password" />
+	</label>
+
+	<label class="label">
+		<span class="label-text">Email Input</span>
+	</label>
+	<input type="email" placeholder="Enter email" class="input input-bordered w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Number Input</span>
+	</label>
+	<input type="number" placeholder="Enter number" class="input input-bordered w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Date Input</span>
+	</label>
+	<input type="date" class="input input-bordered w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Checkbox</span>
+	</label>
+	<input type="checkbox" class="checkbox" />
+
+	<label class="label">
+		<span class="label-text">Radio Button</span>
+	</label>
+	<input type="radio" name="radio" class="radio" />
+</form>
+
+<h3>Explanation</h2>
+
+<p>The input examples consist of the following elements:</p>
+<ul>
+  <li><strong>Text Input:</strong> A text input field for general text entry.</li>
+  <li><strong>Password Input:</strong> Uses dots to mask the characters entered.</li>
+  <li><strong>Email Input:</strong> An email input field for entering email addresses.</li>
+  <li><strong>Number Input:</strong> A native number input field for entering numeric values.</li>
+  <li><strong>Date Input:</strong> A date input field for selecting dates. Uses a native date picker of the system.</li>
+  <li><strong>Checkbox:</strong> Used for binary choises, able to select multiple inputs at a time.</li>
+  <li><strong>Radio Button:</strong> A radio button for selecting one option from a group.</li>
+</ul>
+
+<h2>Input status</h2>
+
+<p>Inputs can have different states, such as success, error, and warning. These states can be indicated by changing the border color, background color, or adding an icon to the input field.</p>
+
+<form class="form-control w-full max-w-xs flex-col gap-2">
+	<label class="label">
+		<span class="label-text">Success Input</span>
+	</label>
+	<input type="text" placeholder="Success" class="input input-success w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Error Input</span>
+	</label>
+	<input type="text" placeholder="Error" class="input input-error w-full max-w-xs" />
+
+	<label class="label">
+		<span class="label-text">Warning Input</span>
+	</label>
+	<input type="text" placeholder="Warning" class="input input-warning w-full max-w-xs" />
+</form>
+
+<h3>Explanation</h3>
+
+<p>The state examples consist of the following elements:</p>
+<ul>
+  <li><strong>Success Input:</strong> Indicates that the input is valid or successful.</li>
+  <li><strong>Error Input:</strong> Indicates that the input is invalid or has an error.</li>
+  <li><strong>Warning Input:</strong> Indicates that the input has a warning or caution.</li>
+</ul>
+<p>Each state is visually represented by changing the border color and background color of the input field. The labels provide clear instructions to the user, <strong>Errors and Warnings should be accompanied by a message to explain the issue.</strong></p>
+
+<h2>Guidelines</h2>
+<ul>
+  <li>Use clear and concise labels for input elements.</li>
+  <li>Add icons to visually represent the type of input field, and only if you can do it for all the fields in the form.</li>
+  <li>Provide appropriate input types (e.g., text, password, email) for different data.</li>
+  <li>Extend multiple inputs using a <a href="{{ '/forms' | url }}">form</a> to group related elements together.</li>
+</ul>
+
+<h2>Further Documentation</h2>
+
+<p>For more information about implementation and usage, refer to the <a href="https://daisyui.com/components/input/">DaisyUI documentation</a>.</p>
