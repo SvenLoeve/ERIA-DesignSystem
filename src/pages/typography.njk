@@ -27,6 +27,24 @@ description: Typography - Guidelines and Styles
 
 <h2>Dos and Don'ts</h2>
 
+{% set dos=[
+    "Use Inter for all text elements to maintain consistency.",
+    "Maintain left-aligned, ragged-right alignment for paragraphs to support readability.",
+    "Limit font weights to Regular for text, and Bold for important information. For simplicity and cohesion.",
+    "Use appropriate font sizes for different text elements.",
+    "Use underlined text for links to make them easily recognizable."
+] %}
+
+{% set donts=[
+    "Don't use multiple font sizes or weights within the same block of text, as this reduces readability.",
+    "Don't use bold text excessively, as it can reduce readability.",
+    "Don't use low-contrast text colors between text and background that are hard to read.",
+    "Don't use decorative or expressive typefaces outside of specific marketing materials or graphics.",
+    "Don't use links for non-navigational purposes, use a <a href=\"{{ '/buttons' | url }}\">button</a> instead."
+] %}
+
+{% include "includes/dos-donts.njk" %}
+
 <h3>Dos</h3>
 <ul>
 	<li>Use Inter for all text elements to maintain consistency.</li>

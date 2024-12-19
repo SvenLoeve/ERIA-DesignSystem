@@ -52,24 +52,22 @@ description: Forms - A collection of form elements
 
 <h2>Guidelines</h2>
 
-<h3>Dos</h3>
+{% set dos=[
+	"Use clear and concise labels for form elements to ensure accessibility.",
+	"Group related form elements together for better organization.",
+	"Provide appropriate input types (e.g., text, password, email) for different data.",
+	"Ensure proper spacing and alignment of form elements. All elements should be spaced equally for consistency.",
+	"Use primary buttons for main actions and default or secondary buttons for supplementary actions."
+] %}
 
-<ul>
-	<li>Use clear and concise labels for form elements to ensure accessibility.</li>
-	<li>Group related form elements together for better organization.</li>
-	<li>Provide appropriate input types (e.g., text, password, email) for different data.</li>
-	<li>Ensure proper spacing and alignment of form elements. All elements should be spaced equally for consistency.</li>
-	<li>Use primary buttons for main actions and default or secondary buttons for supplementary actions.</li>
-</ul>
+{% set donts=[
+	"Don't use placeholder text as a substitute for labels.",
+	"Don't overcrowd the form with too many elements or adjacent forms that might cause confusion.",
+	"Don't use inconsistent styling for form elements.",
+	"Don't forget to provide feedback for form validation errors."
+] %}
 
-<h3>Don'ts</h3>
-
-<ul>
-	<li>Don't use placeholder text as a substitute for labels.</li>
-	<li>Don't overcrowd the form with too many elements or adjacent forms that might cause confusion.</li>
-	<li>Don't use inconsistent styling for form elements.</li>
-	<li>Don't forget to provide feedback for form validation errors.</li>
-</ul>
+{% include "includes/dos-donts.njk" %}
 
 <h2>Further Documentation</h2>
 

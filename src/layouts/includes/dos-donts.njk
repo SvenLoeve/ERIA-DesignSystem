@@ -1,0 +1,22 @@
+<div class="dos-donts flex flex-col md:flex-row">
+  <div class="dos flex-1 p-4">
+    <h3 class="text-xl font-bold mb-2">Dos</h3>
+    <ul class="list-disc list-inside">
+      {% for do in dos %}
+        <li class="do-item flex items-center mb-2">
+          <span class="icon-checkmark text-green-500 mr-2">✔</span><p> {{ do }} </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="donts flex-1 p-4">
+    <h3 class="text-xl font-bold mb-2">Don'ts</h3>
+    <ul class="list-disc list-inside">
+      {% for dont in donts %}
+        <li class="dont-item flex items-center mb-2">
+          <span class="icon-cross text-red-500 mr-2">✘</span><p> {{ dont | safe }} </p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
