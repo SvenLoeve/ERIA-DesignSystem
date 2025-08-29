@@ -23,7 +23,7 @@
 		"autoprefixer": "^10.4.21",
 		"cross-env": "^10.0.0",
 		"cssnano": "^7.1.1",
-		"daisyui": "^5.0.53",
+		"daisyui": "^5.0.54",
 		"html-minifier-terser": "^7.2.0",
 		"npm-run-all": "^4.1.5",
 		"postcss": "^8.5.6",
